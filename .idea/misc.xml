@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/underline_tab_layout.xml" value="0.192" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5010416666666667" />
-        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.5140625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.390990990990991" />
+        <entry key="app/src/main/res/layout/fragment_maintenance.xml" value="0.5140625" />
+        <entry key="app/src/main/res/layout/fragment_myvehicles.xml" value="0.5140625" />
       </map>
     </option>
   </component>

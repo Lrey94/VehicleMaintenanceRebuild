@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">VehicleMaintenanceRebuild</string>
+
+    <string name="homeScreenName">Home</string>
+    <string name="myVehicleScreenName">My Vehicles</string>
+    <string name="maintenanceScreenName">Maintenance</string>
+
+
+
 </resources>

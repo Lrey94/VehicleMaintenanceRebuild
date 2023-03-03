@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     buildFeatures{
         viewBinding true
@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId "com.example.vehiclemaintenancerebuild"
         minSdk 29
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -47,8 +47,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation "androidx.room:room-ktx:2.5.0"
-    implementation "androidx.room:room-runtime:2.5.0"
+    implementation "androidx.room:room-ktx:2.4.0"
+    implementation "androidx.room:room-runtime:2.4.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
 
@@ -66,9 +66,9 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-auth:20.4.1'
 
-    implementation "androidx.room:room-runtime:2.5.0"
+    implementation "androidx.room:room-runtime:2.4.0"
     androidTestImplementation project(path: ':app')
-    kapt "androidx.room:room-compiler:2.5.0"
+    kapt "androidx.room:room-compiler:2.4.0"
 
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
 }
