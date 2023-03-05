@@ -18,15 +18,12 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/homeScreenTabLayout"
+        style="@style/Vehicle_maintenance.Navigation.TabLayout"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         app:tabGravity="fill"
         app:tabMode="fixed"
         app:tabMaxWidth="0dp"
-        app:tabIndicator="@drawable/underline_tab_layout"
-        app:tabIndicatorColor="@color/white"
-        app:tabTextColor="@color/white"
-        app:tabBackground="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

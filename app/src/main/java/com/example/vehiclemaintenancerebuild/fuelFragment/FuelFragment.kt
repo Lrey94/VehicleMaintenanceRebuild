@@ -1,15 +1,15 @@
-package com.example.vehiclemaintenancerebuild.homescreen
+package com.example.vehiclemaintenancerebuild.fuelFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.vehiclemaintenancerebuild.databinding.FragmentHomeBinding
+import com.example.vehiclemaintenancerebuild.databinding.FragmentFuelBinding
 
-class HomeFragment : Fragment() {
+class FuelFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentFuelBinding? = null
     private val binding get() = requireNotNull(_binding){
         "XML Input Fragment binding called when view not available"
     }
@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentFuelBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

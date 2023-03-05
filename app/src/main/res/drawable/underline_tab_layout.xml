@@ -3,12 +3,10 @@
     <item android:gravity="center">
         <shape>
             <size
-                android:width="150dp"
-                android:height="6dp" />
-
+                android:width="70dp"
+                android:height="4dp" />
             <corners android:radius="10dp" />
-
-            <solid android:color="@color/white" />
+            <solid android:color="@color/tabTextBlue" />
         </shape>
     </item>
 </layer-list>

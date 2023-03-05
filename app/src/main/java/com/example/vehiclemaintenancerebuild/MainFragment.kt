@@ -36,12 +36,14 @@ class MainFragment : Fragment(){
 
         TabLayoutMediator(binding.homeScreenTabLayout, binding.homeScreenTabAdapter) { tab, index ->
             when (index) {
-                HomeScreens.Home.ordinal ->
-                    tab.setTab(HomeScreens.Home.stringResID, HomeScreens.Home.icon)
                 HomeScreens.MyVehicles.ordinal ->
                     tab.setTab(HomeScreens.MyVehicles.stringResID, HomeScreens.MyVehicles.icon)
+                HomeScreens.Fuel.ordinal ->
+                    tab.setTab(HomeScreens.Fuel.stringResID, HomeScreens.Fuel.icon)
                 HomeScreens.Maintenance.ordinal ->
                     tab.setTab(HomeScreens.Maintenance.stringResID, HomeScreens.Maintenance.icon)
+                HomeScreens.Reports.ordinal ->
+                    tab.setTab(HomeScreens.Reports.stringResID, HomeScreens.Reports.icon)
             }
         }.attach()
     }
