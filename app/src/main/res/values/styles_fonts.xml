@@ -13,4 +13,16 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="VehicleMaintenance.Font.RecyclerView.CardView.VehicleName" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/tilt_neon</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/recycler_view_list_item_header_text</item>
+    </style>
+
+    <style name="VehicleMaintenance.Font.RecyclerView.CardView.VehicleMakeModel" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/tilt_neon</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

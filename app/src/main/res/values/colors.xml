@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="tabTextBlue">#304FFE</color>
     <color name="tabIconBlue">#2979FF</color>
+    <color name="recycler_view_list_item_background">#E0E0E0</color>
+    <color name="recycler_view_list_item_header_text">#283593</color>
+    <color name="button_colour">#283593</color>
 </resources>

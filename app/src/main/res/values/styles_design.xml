@@ -6,4 +6,21 @@
         <item name="cornerSize">25%</item>
     </style>
 
+    <style name="VehicleMaintenance.Shape.ButtonPrimary" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="VehicleMaintenance.Button.Primary" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="backgroundTint">@color/button_colour</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="shapeAppearance">@style/VehicleMaintenance.Shape.ButtonPrimary</item>
+        <!--suppress CheckTagEmptyBody - Overridden to remove default max width-->
+        <item name="android:maxWidth"></item>
+        <item name="fontFamily">@font/tilt_neon</item>
+        <item name="android:fontFamily">@font/tilt_neon</item>
+    </style>
+
 </resources>
