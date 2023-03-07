@@ -6,6 +6,8 @@
     <string name="maintenanceScreenName">Maintenance</string>
     <string name="reportsScreenName">Reports</string>
     <string name="settings_menu_name">Settings</string>
+    <string name="myVehicles_Header">My vehicles</string>
+    <string name="welcome_Header">Hi Lawrence</string>
 
 
 </resources>
