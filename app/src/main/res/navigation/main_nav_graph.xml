@@ -9,5 +9,19 @@
         android:id="@+id/mainFragment"
         android:name="com.example.vehiclemaintenancerebuild.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addNewVehicleFragment"
+            app:destination="@id/addNewVehicleFragment"
+            app:enterAnim="@anim/slide_in_from_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewVehicleFragment"
+        android:name="com.example.vehiclemaintenancerebuild.myvehicles.AddNewVehicleDialogFragment"
+        android:label="AddNewVehicleFragment" >
+        <action
+            android:id="@+id/action_addNewVehicleFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:exitAnim="@anim/slide_out_from_top" />
+    </fragment>
 </navigation>

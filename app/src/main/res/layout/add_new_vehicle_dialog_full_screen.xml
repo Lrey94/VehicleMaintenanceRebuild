@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/addVehicleTopImageView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/hondacivic"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vehicleNameTextViewHeader"
+            style="@style/Vehicle_Maintenance.Font.Header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Vehicle Name"
+            app:layout_constraintTop_toBottomOf="@id/addVehicleTopImageView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_text_vehicle_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="@color/recycler_view_list_item_background"
+            app:boxStrokeWidthFocused="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vehicleNameTextViewHeader">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_edit_text_vehicle_name"
+                style="@style/VehicleMaintenance.Input.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:font="@font/tilt_neon"
+                android:padding="10dp"
+                android:hint="Enter a name For this vehicle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vehicleTypeTextViewHeader"
+            style="@style/Vehicle_Maintenance.Font.Header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Vehicle Type"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_text_vehicle_name"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_exposed_dropdown_menu_text_input_layout"
+            style="@style/VehicleMaintenance.Input.DropDownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:font="@font/tilt_neon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleTypeTextViewHeader">
+
+            <AutoCompleteTextView
+                android:id="@+id/input_exposed_dropdown_menu_text_input_vehicle_type"
+                style="@style/VehicleMaintenance.Input.DropDownMenu.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vehicleMakeTextViewHeader"
+            style="@style/Vehicle_Maintenance.Font.Header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Vehicle Make"
+            app:layout_constraintTop_toBottomOf="@+id/input_exposed_dropdown_menu_text_input_layout"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_exposed_dropdown_menu_text_input_layout_vehicle_make"
+            style="@style/VehicleMaintenance.Input.DropDownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:font="@font/tilt_neon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleMakeTextViewHeader">
+
+        <AutoCompleteTextView
+            android:id="@+id/input_exposed_dropdown_menu_text_input_vehicle_make"
+            style="@style/VehicleMaintenance.Input.DropDownMenu.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vehicleModelTextViewHeader"
+            style="@style/Vehicle_Maintenance.Font.Header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Vehicle Model"
+            app:layout_constraintTop_toBottomOf="@+id/input_exposed_dropdown_menu_text_input_layout_vehicle_make"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_text_vehicle_model"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="@color/recycler_view_list_item_background"
+            app:boxStrokeWidthFocused="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vehicleModelTextViewHeader">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_edit_text_vehicle_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:font="@font/tilt_neon"
+                android:padding="10dp"
+                android:hint="'Civic'"
+                android:textAppearance="@style/VehicleMaintenance.Font.Input"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vehicleMileageTextViewHeader"
+            style="@style/Vehicle_Maintenance.Font.Header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Vehicle Mileage"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_text_vehicle_model"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_text_vehicle_mileage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="@color/recycler_view_list_item_background"
+            app:boxStrokeWidthFocused="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vehicleMileageTextViewHeader">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_edit_text_vehicle_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:font="@font/tilt_neon"
+                android:padding="10dp"
+                android:hint="'15000'"
+                android:textAppearance="@style/VehicleMaintenance.Font.Input"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/add_vehicle_fragment_close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_close_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_vehicle_fragment_upload_image_button"
+            style="@style/VehicleMaintenance.Button.Primary"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:elevation="10dp"
+            android:text="Upload Vehicle Image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_vehicle_fragment_save_vehicle_button"
+            style="@style/VehicleMaintenance.Button.Primary"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:text="Save vehicle to garage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_text_vehicle_mileage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="@string/myVehicles_Header"
         app:layout_constraintStart_toStartOf="@+id/shapeableImageViewLayout"
         app:layout_constraintTop_toBottomOf="@id/toolbar_with_menu" />
@@ -36,20 +36,19 @@
         android:id="@+id/textViewNoItemsToDisplay"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="112dp"
         android:text="@string/noVehiclesToDisplay"
         android:textSize="20sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shapeableImageViewLayout" />
 
     <FrameLayout
         android:id="@+id/shapeableImageViewLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myVehiclesHeaderTextView">
@@ -59,31 +58,55 @@
             style="@style/Vehicle_Maintenance.Font.Header1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:elevation="10dp"
             android:text="@string/welcome_Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar_with_menu" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragment_home_add_vehicle_text_view"
+            style="@style/Vehicle_Maintenance.Font.Header3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="120dp"
+            android:elevation="10dp"
+            android:text="@string/welcome_message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_with_menu" />
+
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="425dp"
-            android:layout_height="170dp"
+            android:layout_width="375dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView"
-            app:srcCompat="@drawable/vehicle_pic" />
+            app:srcCompat="@drawable/vehicle_pic"
+            app:strokeColor="@null"/>
 
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myVehicles_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintTop_toBottomOf="@id/shapeableImageViewLayout"
         tools:listitem="@layout/myvehicles_recycler_view_list_item"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/myVehicles_add_new_vehicle_button"
+        style="@style/VehicleMaintenance.Button.Large"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginVertical="10dp"
+        android:text="@string/addNewVehicleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageViewLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

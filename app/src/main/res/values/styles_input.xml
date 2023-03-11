@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="VehicleMaintenance.Input.TextLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/tabIconBlue</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="VehicleMaintenance.Input.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textAppearance">@style/VehicleMaintenance.Font.Input</item>
+    </style>
+
+    <style name="VehicleMaintenance.Font.Input" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/tilt_neon</item>
+        <item name="android:fontFamily">@font/tilt_neon</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="VehicleMaintenance.Input.DropDownMenu" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/VehicleMaintenance.Font.Input</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxBackgroundColor">@color/recycler_view_list_item_background</item>
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="VehicleMaintenance.Input.DropDownMenu.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:textAppearance">@style/VehicleMaintenance.Font.Input</item>
+        <item name="fontFamily">@font/tilt_neon</item>
+        <item name="android:fontFamily">@font/tilt_neon</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">text</item>
+    </style>
+</resources>

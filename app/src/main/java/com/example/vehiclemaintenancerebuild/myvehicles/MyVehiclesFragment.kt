@@ -9,15 +9,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vehiclemaintenance.database.VehicleDatabase
+import com.example.vehiclemaintenancerebuild.R
 import com.example.vehiclemaintenancerebuild.databinding.FragmentMyvehiclesBinding
 import com.example.vehiclemaintenancerebuild.recyclerview.ItemAdapter
 import com.example.vehiclemaintenancerebuild.recyclerview.SwipeToDeleteCallback
 import com.example.vehiclemaintenancerebuild.viewmodels.MyVehiclesViewModel
 import com.example.vehiclemaintenancerebuild.viewmodels.VehicleViewModelFactory
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MyVehiclesFragment : Fragment() {
 
@@ -27,6 +30,7 @@ class MyVehiclesFragment : Fragment() {
     }
     private lateinit var vehicleViewModel: MyVehiclesViewModel
     private val adapter = ItemAdapter()
+    private lateinit var dialog: BottomSheetDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,11 +41,6 @@ class MyVehiclesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMyvehiclesBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         val application = requireNotNull(this.activity).application
         val dataSource = VehicleDatabase.getInstance(application).vehicleDatabaseDao
@@ -53,12 +52,28 @@ class MyVehiclesFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
+        setClickListeners()
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         observeVehiclesFromDatabase()
+
+        setUpSwipeToDelete()
 
     }
 
-
     private fun setClickListeners() {
+        binding.myVehiclesAddNewVehicleButton.setOnClickListener {
+            showFullScreenDialog()
+        }
+    }
+
+    private fun showFullScreenDialog() {
+        findNavController().navigate(R.id.action_mainFragment_to_addNewVehicleFragment)
 
     }
 

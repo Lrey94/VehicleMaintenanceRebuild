@@ -8,6 +8,9 @@
     <string name="settings_menu_name">Settings</string>
     <string name="myVehicles_Header">My vehicles</string>
     <string name="welcome_Header">Hi Lawrence</string>
+    <string name="welcome_message">Hope you\'re having a great day!</string>
+    <string name="addNewVehicleButton">Add New Vehicle</string>
+    <string name="not_all_details_entered">Please Complete all Fields</string>
 
     <string name="recycler_view_list_item_vehicle_name">Vehicle Name</string>
     <string name="recycler_view_list_item_vehicle_make">Vehicle Make</string>

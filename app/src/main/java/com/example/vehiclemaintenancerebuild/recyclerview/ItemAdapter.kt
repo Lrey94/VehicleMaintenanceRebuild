@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.vehiclemaintenance.database.Vehicle
 import com.example.vehiclemaintenancerebuild.R
-import com.example.vehiclemaintenancerebuild.database.Vehicle
 
 class ItemAdapter : ListAdapter<Vehicle, ItemAdapter.ViewHolder>(VehicleDiffCallBack()) {
 
@@ -45,8 +45,9 @@ class ItemAdapter : ListAdapter<Vehicle, ItemAdapter.ViewHolder>(VehicleDiffCall
 
         fun bind(item: Vehicle) {
             mVehicleName.text = item.vehicleName
+            mVehicleMake.text = item.vehicleMake
             mVehicleModel.text = item.vehicleModel
-
+//
             Glide.with(this.context)
                 .load(item.vehicleImageURI)
                 .error(R.drawable.notavailableimage)
